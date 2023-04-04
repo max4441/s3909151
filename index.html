@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<title>
+    My First Website.
+</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"> </script>
+</head>
+
+
+<body style="background-color: antiquewhite;">
+
+<!--
+   <h1> This is the main heading! </h1>
+
+    <h2>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            This is a sub heading
+        </p>
+    </h2>
+    <p>
+        this is a paragraph <br>no shit <br> yeah no shit
+    </p>
+    -->
+
+
+
+<img id="rain" src="img/Rain.png" onmousedown="this.src='img/wind.png'; "onmouseup="this.src='img/rain.png'" height="200" width="200" /></div>
+<img id="wind" src="img/Wind.png" height="200" width="200"/></div>
+<img id="pressure" src="img/Pressure.png" height="200" width="200"/></div>
+
+
+
+<script>
+    var sound1 = new buzz.sound("sound/rain.wav"); 
+    var sound2 = new buzz.sound("sound/wind.wav");
+    var sound3 = new buzz.sound("sound/pressure.wav");
+
+    window.onload = function() {
+        document.getElementById('rain').addEventListener('mousedown', function () {sound1.play(); });  
+        document.getElementById('wind').addEventListener('click', function () {sound2.play(); });
+        document.getElementById('pressure').addEventListener('click', function () {sound3.play(); });
+    }  
+</script>   
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
